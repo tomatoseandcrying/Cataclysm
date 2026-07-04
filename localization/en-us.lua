@@ -1,27 +1,27 @@
-print("=-- Loading Localization (Putrescent - EN-US)");
+print("=-- Loading Localization (Cataclysm - EN-US)");
 
 return {
     descriptions = {
         Mod = {
-            putrescent = {
-                name = "Putrescent",
+            cataclysm = {
+                name = "Cataclysm",
                 text = {
                     "{s:1.4}Keep an eye out, should your runs take",
                     "{s:1.4}a more {s:1.55,C:dark_edition}dire{s:1.4} turn...",
                     "{s:3.2} ",
-                    "{C:inactive,s:1.2}Mod made by {C:attention,s:1.4,T:j_putr_argel}pangaea47",
+                    "{C:inactive,s:1.2}Mod made by {C:attention,s:1.4,T:j_clyt_argel}pangaea47",
                     "{C:inactive,s:0.9}with help from the following:",
-                    "{C:legendary,s:1.0,T:j_putr_tomatose}tomatose{C:inactive,s:0.8} / {C:enhanced,s:1.0,T:j_putr_lizzie}lanedarushpy{C:inactive,s:0.8} / {C:red,s:1.0,T:j_putr_mf}notmario",
+                    "{C:legendary,s:1.0,T:j_clyt_tomatose}tomatose{C:inactive,s:0.8} / {C:enhanced,s:1.0,T:j_clyt_lizzie}lanedarushpy{C:inactive,s:0.8} / {C:red,s:1.0,T:j_clyt_mf}notmario",
                     "{C:inactive,s:0.8}(hover for more info)"
                 }
             }
         },
 
         Cataclysm = {
-            -- c_putr_[card_name_here]
+            -- c_clyt_[card_name_here]
 
             -- Deluge
-            c_putr_deluge = {
+            c_clyt_deluge = {
                 name = "Deluge",
                 text = {
                     {
@@ -31,7 +31,7 @@ return {
             },
 
             -- Doomsday
-            c_putr_doomsday = {
+            c_clyt_doomsday = {
                 name = "Doomsday",
                 text = {
                     {
@@ -41,7 +41,7 @@ return {
             },
 
             -- Paroxysm
-            c_putr_paroxysm = {
+            c_clyt_paroxysm = {
                 name = "Paroxysm",
                 text = {
                     {
@@ -51,7 +51,7 @@ return {
             },
 
             -- Invasion
-            c_putr_invasion = {
+            c_clyt_invasion = {
                 name = "Invasion",
                 text = {
                     {
@@ -66,7 +66,7 @@ return {
             },
 
             -- Absolution
-            c_putr_absolution = {
+            c_clyt_absolution = {
                 name = "Absolution",
                 text = {
                     {
@@ -76,7 +76,7 @@ return {
             },
 
             -- Plague
-            c_putr_plague = {
+            c_clyt_plague = {
                 name = "Plague",
                 text = {
                     {
@@ -86,7 +86,7 @@ return {
             },
 
             -- Disaster
-            c_putr_disaster = {
+            c_clyt_disaster = {
                 name = "Disaster",
                 text = {
                     {
@@ -96,7 +96,7 @@ return {
             },
 
             -- Collision
-            c_putr_collision = {
+            c_clyt_collision = {
                 name = "Collision",
                 text = {
                     {
@@ -106,7 +106,7 @@ return {
             },
 
             -- Takeover
-            c_putr_takeover = {
+            c_clyt_takeover = {
                 name = "Takeover",
                 text = {
                     {
@@ -116,7 +116,7 @@ return {
             },
 
             -- Maleficence
-            c_putr_maleficence = {
+            c_clyt_maleficence = {
                 name = "Maleficence",
                 text = {
                     {
@@ -126,7 +126,7 @@ return {
             },
 
             -- Rip
-            c_putr_rip = {
+            c_clyt_rip = {
                 name = "Rip",
                 text = {
                     {
@@ -136,7 +136,7 @@ return {
             },
 
             -- Crunch
-            c_putr_crunch = {
+            c_clyt_crunch = {
                 name = "Crunch",
                 text = {
                     {
@@ -146,7 +146,7 @@ return {
             },
 
             -- Heat Death
-            c_putr_heat_death = {
+            c_clyt_heat_death = {
                 name = "Heat Death",
                 text = {
                     {
@@ -156,7 +156,7 @@ return {
             },
 
             -- Vacuum Decay
-            c_putr_vacuum_decay = {
+            c_clyt_vacuum_decay = {
                 name = "Vacuum Decay",
                 text = {
                     {
@@ -166,7 +166,7 @@ return {
             },
 
             -- Occulture
-            c_putr_occulture = {
+            c_clyt_occulture = {
                 name = "Occulture",
                 text = {
                     {
@@ -176,7 +176,7 @@ return {
             },
 
             -- Postexistence
-            c_putr_postexistence = {
+            c_clyt_postexistence = {
                 name = "Postexistence",
                 text = {
                     {
@@ -186,7 +186,7 @@ return {
             },
 
             -- Stagnancy
-            c_putr_stagnancy = {
+            c_clyt_stagnancy = {
                 name = "Stagnancy",
                 text = {
                     {
@@ -196,7 +196,7 @@ return {
             },
 
             -- Tempest
-            c_putr_tempest = {
+            c_clyt_tempest = {
                 name = "Tempest",
                 text = {
                     {
@@ -206,7 +206,7 @@ return {
             },
             
             -- Damnation
-            c_putr_damnation = {
+            c_clyt_damnation = {
                 name = "Damnation",
                 text = {
                     {
@@ -216,7 +216,7 @@ return {
             },
 
             -- Black Hole Sun
-            c_putr_black_hole_sun = {
+            c_clyt_black_hole_sun = {
                 name = "Black Hole Sun",
                 text = {
                     {
@@ -226,7 +226,7 @@ return {
             },
 
             -- Anathema
-            c_putr_anathema = {
+            c_clyt_anathema = {
                 name = "Anathema",
                 text = {
                     {

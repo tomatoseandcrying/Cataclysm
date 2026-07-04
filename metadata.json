@@ -1,11 +1,11 @@
 {
-    "id": "putrescent",
-    "name": "Putrescent",
+    "id": "cataclysm",
+    "name": "Cataclysm",
     "author": [
         "pangaea47", "tomatose"
     ],
-    "description": "Yo, Burger?",
-    "prefix": "putr",
-    "main_file": "Putrescent.lua",
+    "description": "Yo, Yoghurt?",
+    "prefix": "clyt",
+    "main_file": "Cataclysm.lua",
     "version": "0.0.0"
 }

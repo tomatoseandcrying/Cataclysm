@@ -1,4 +1,4 @@
-if PUTR.debug then print("=-- Loading extras...") end
+if CLYT.debug then print("=-- Loading extras...") end
 
 -- Credits "Jokers" (tooltips)
 SMODS.Joker {
@@ -13,7 +13,7 @@ SMODS.Joker {
         },
         text = {
             "Creator and Artist of",
-            "{C:dark_edition,s:1.2}Putrescent",
+            "{C:dark_edition,s:1.2}Cataclysm",
             " ",
             "{C:inactive,s:0.8}... weird little spider thing"
         }
@@ -36,7 +36,7 @@ SMODS.Joker {
             "{C:red,s:1.1}Doom{s:1.0} mechanic, etc.",
             " ",
             "First assigned programmer for",
-            "{C:dark_edition}Putrescent{}"
+            "{C:dark_edition}Cataclysm{}"
         }
     },
 
@@ -86,7 +86,7 @@ SMODS.Joker {
 }
 
 -- Description localization
-PUTR.description_loc_vars = function()
+CLYT.description_loc_vars = function()
     return {
         text_colour = G.C.WHITE,
         background_colour = G.C.CLEAR,
@@ -94,4 +94,4 @@ PUTR.description_loc_vars = function()
     }
 end
 
-if PUTR.debug then print("=-- Done loading extras!") end
+if CLYT.debug then print("=-- Done loading extras!") end

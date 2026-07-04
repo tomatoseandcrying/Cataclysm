@@ -1,12 +1,12 @@
-PUTR.calculate = function(self, context)
+CLYT.calculate = function(self, context)
 	local res = {}
 
 	if context.end_of_round and context.main_eval then
-		for _, card in pairs(G.putr_cataclysms.cards) do
+		for _, card in pairs(G.clyt_cataclysms.cards) do
 			card.ability.rounds_remaining = card.ability.rounds_remaining - 1
 			if card.ability.rounds_remaining == 0 then
-				PUTR.unshrink_card(card)
-				G.putr_cataclysms:remove_card(card);
+				CLYT.unshrink_card(card)
+				G.clyt_cataclysms:remove_card(card);
 				G.consumeables:emplace(card);
 				card_eval_status_text(card, "extra", nil, nil, nil, {
 					message = "Complete!",

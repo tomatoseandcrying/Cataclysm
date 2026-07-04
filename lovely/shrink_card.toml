@@ -16,7 +16,7 @@ position = 'before'
 match_indent = true
 payload = '''
 -- If node collision needs to be scaled, do that
-if self.putr_scale_collision then
+if self.clyt_scale_collision then
     local scale_fac = self.T.scale
 
     if math.abs(T.r) < 0.1 then
@@ -55,7 +55,7 @@ pattern = '''love.graphics.rotate(transform.r)'''
 position = 'after'
 match_indent = true
 payload = '''
-if self.putr_scale_collision then
+if self.clyt_scale_collision then
     love.graphics.scale(transform.scale, transform.scale)
 end
 '''
@@ -67,7 +67,7 @@ pattern = '''love.graphics.rectangle('line', 0, 0, transform.w*G.TILESIZE,transf
 position = 'before'
 match_indent = true
 payload = '''
-if self.putr_scale_collision then
+if self.clyt_scale_collision then
     love.graphics.setLineWidth(love.graphics.getLineWidth() / transform.scale)
 end
 '''
