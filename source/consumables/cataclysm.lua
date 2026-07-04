@@ -37,6 +37,7 @@ CLYT.Cataclysm = SMODS.Consumable:extend{
     display_size = { w = 83, h = 103 },
     atlas = "clyt_CataclysmSprites",
 
+    use_main_end = true,
 	set_ability = function(self, card, initial, delay_sprites)
         card.ability.active = false
         card.ability.default_pos = card.config.center.pos;
@@ -44,6 +45,23 @@ CLYT.Cataclysm = SMODS.Consumable:extend{
         card.ability.default_vt_scale = card.VT.scale;
         card.ability.default_t_scale = card.T.scale;
 	end,
+
+    loc_vars = function(self, info, card)
+        if not self.use_main_end then return end
+        card.ability.rounds_remaining = card.ability.rounds_remaining or card.ability.rounds or 0;
+        card.ability.active = card.ability.active or false;
+        card.ability.rounds = card.ability.rounds or 1;
+
+        local active = card.ability.active;
+        local in_area = card.area == G.clyt_cataclysms;
+        local progress = (card.ability.rounds - card.ability.rounds_remaining) .. " / " .. card.ability.rounds;
+        local progress_colour = (active and G.C.GREEN) or (in_area and G.C.FILTER) or G.C.RED;
+        local progress_text = (active and localize("k_clyt_active")) or (in_area and progress) or localize("k_clyt_inactive");
+
+        return {
+            main_end = G.FUNCS.clyt_generate_main_end(card, progress_colour, progress_text:lower())
+        }
+    end,
 
     set_indicator = function(self, card, shrink)
         if not card.config.center.indicator then return false end
@@ -168,6 +186,7 @@ CLYT.Cataclysm {
     },
 
     config = { rounds = 2, },
+
     can_use_inactive = function(self, card)
         return true
     end,
@@ -220,6 +239,31 @@ CLYT.Cataclysm {
     key = "takeover",
     set = "Cataclysm",
     pos = { x = 8, y = 0 },
+    indicator = { 
+        atlas_key = "clyt_CataclysmIndicators", 
+        pos = { x = 8, y = 0 },
+        display_size = { w = 23, h = 23 },
+        scale_mod = 0.25
+    },
+
+    config = { rounds = 3, stored_slots = 0, slots_gained = 1 },
+    can_use_inactive = function(self, card)
+        return true
+    end,
+
+    can_use_active = function(self, card)
+        return true
+    end,
+
+    use_inactive = function(self, card)
+        card.ability.stored_slots = G.consumeables.config.card_limit
+        G.consumeables.config.card_limit = G.consumeables.config.card_limit - card.ability.stored_slots
+    end,
+    
+    use_active = function(self, card)
+        G.consumeables.config.card_limit = G.consumeables.config.card_limit + card.ability.stored_slots
+        G.jokers.config.card_limit = G.jokers.config.card_limit + card.ability.slots_gained
+    end,
 }
 
 -- Maleficence

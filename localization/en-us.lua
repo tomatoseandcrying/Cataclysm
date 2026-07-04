@@ -56,11 +56,13 @@ return {
                 text = {
                     {
                         "When used, sets discards",
-                        "to {C:red}0{} for {C:attention}2{} rounds"
+                        "to {C:red}0{} for {C:attention}2{} rounds",
+                        -- "{B:1,C:white,s:1.6} {B:1,C:white,s:1.0}#1#{B:1,C:white,s:1.6} {}"
                     },
                     {
-                        "After this, returns discards and",
-                        "gives {C:attention}+2{} consumable slots"
+                        "After {C:attention}2{} rounds, reuse to return",
+                        "previous discards and gain",
+                        "{C:attention}+2{} consumable slots"
                     }
                 }
             },
@@ -110,7 +112,13 @@ return {
                 name = "Takeover",
                 text = {
                     {
-                        "{C:inactive}Placeholder description"
+                        "When used, sets consumable slots",
+                        "to {C:red}0{} for {C:attention}3{} rounds",
+                    },
+                    {
+                        "After {C:attention}3{} rounds, reuse to return",
+                        "previous consumable slots and gain",
+                        "{C:attention}+1{} Joker slot"
                     }
                 }
             },
@@ -245,7 +253,10 @@ return {
         dictionary = {
             k_cataclysm = "Cataclysm",
             b_cataclysm_cards = "Cataclysm Cards",
-            b_cataclysm = "Cataclysm"
+            b_cataclysm = "Cataclysm",
+            k_clyt_active = "Completed",
+            k_clyt_inactive = "Inactive",
+            k_clyt_rounds_remaining = "Rounds Remaining"
         }
     }
 }
