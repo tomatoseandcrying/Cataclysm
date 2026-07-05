@@ -98,7 +98,8 @@ return {
                     },
                     {
                         "After {C:attention}3{} rounds, reuse",
-                        "to gain {C:attention}+3{} hand size and",
+                        "to regain any lost hand",
+                        "size, gain {C:attention}+1{} hand size and",
                         "{C:attention}+1{} card selection limit"
                     }
                 }
