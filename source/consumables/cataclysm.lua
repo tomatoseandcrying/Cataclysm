@@ -225,6 +225,26 @@ CLYT.Cataclysm {
     key = "disaster",
     set = "Cataclysm",
     pos = { x = 6, y = 0 },
+    indicator = { 
+        atlas_key = "clyt_CataclysmIndicators", 
+        pos = { x = 6, y = 0 },
+        display_size = { w = 23, h = 23 },
+        scale_mod = 0.25
+    },
+    config = { rounds = 3, },
+    can_use_inactive = function(self, card)
+        return true
+    end,
+    can_use_active = function(self, card)
+        return true
+    end,
+    use_inactive = function(self, card)
+        G.hand.config.card_limit = G.hand.config.card_limit - 2
+    end,
+    use_active = function(self, card)
+        SMODS.change_play_limit(1)
+        G.hand.config.card_limit = G.hand.config.card_limit + 3
+    end,
 }
 
 -- Collision

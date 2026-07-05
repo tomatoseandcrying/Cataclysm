@@ -92,7 +92,14 @@ return {
                 name = "Disaster",
                 text = {
                     {
-                        "{C:inactive}Placeholder description"
+                        "When used, {C:red}-2{} hand size",
+                        "for {C:attention}3{} rounds",
+                        -- "{B:1,C:white,s:1.6} {B:1,C:white,s:1.0}#1#{B:1,C:white,s:1.6} {}"
+                    },
+                    {
+                        "After {C:attention}3{} rounds, reuse",
+                        "to gain {C:attention}+3{} hand size and",
+                        "{C:attention}+1{} card selection limit"
                     }
                 }
             },
