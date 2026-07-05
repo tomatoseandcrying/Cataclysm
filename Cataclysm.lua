@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 --- Cataclysm Mod
+=======
+-- Cataclysm Mod
+>>>>>>> e6194bea4321a951fccd2f7bc2a3d912d19ec4b6
 CLYT = SMODS.current_mod;
 CLYT.debug = true;
 
