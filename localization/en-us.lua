@@ -216,7 +216,12 @@ return {
                 name = "Tempest",
                 text = {
                     {
-                        "{C:inactive}Placeholder description"
+                        "When used, {X:purple,C:white}X2{} Blind Size",
+                        "for {C:attention}3{} rounds",
+                    },
+                    {
+                        "After {C:attention}3{} rounds, reuse",
+                        "to gain {C:attention}+1{} Voucher slot",
                     }
                 }
             },

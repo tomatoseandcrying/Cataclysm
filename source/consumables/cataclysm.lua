@@ -347,6 +347,26 @@ CLYT.Cataclysm {
     key = "tempest",
     set = "Cataclysm",
     pos = { x = 8, y = 1 },
+    indicator = { 
+        atlas_key = "clyt_CataclysmIndicators", 
+        pos = { x = 8, y = 1 },
+        display_size = { w = 23, h = 23 },
+        scale_mod = 0.25
+    },
+    config = { rounds = 3, blindsize = 2, },
+    can_use_inactive = function(self, card)
+        return true
+    end,
+    can_use_active = function(self, card)
+        return true
+    end,
+    use_inactive = function(self, card)
+        G.GAME.blind_size_multiplier = G.GAME.blind_size_multiplier * 2
+    end,
+    use_active = function(self, card)
+        G.GAME.blind_size_multiplier = G.GAME.blind_size_multiplier / 2
+		SMODS.change_voucher_limit(1)
+    end,
 }
 
 -- Damnation
