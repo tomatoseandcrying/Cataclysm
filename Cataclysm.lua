@@ -7,6 +7,12 @@ if CLYT.debug then
     print("=-- Cataclysm (Loading Sequence)");
 end
 
+SMODS.Atlas({
+    key = 'modicon',
+    path = 'icon.png',
+    px = '32',
+    py = '32'
+})
 --  Loading stuff
 local function load_dir(subfolder)
     local mod_dir = CLYT.path;
