@@ -206,7 +206,14 @@ return {
                 name = "Stagnancy",
                 text = {
                     {
-                        "{C:inactive}Placeholder description"
+                        "When used, apply {C:attention}Eternal{}", 
+                        "sticker to all held Jokers",
+                        "for {C:attention}3{} rounds",
+                    },
+                    {
+                        "After {C:attention}3{} rounds, reuse",
+                        "to remove {C:attention}Eternal{} from all held jokers", 
+                        "and gain {C:attention}+1{} Booster slot",
                     }
                 }
             },

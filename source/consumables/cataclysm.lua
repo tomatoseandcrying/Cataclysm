@@ -340,6 +340,46 @@ CLYT.Cataclysm {
     key = "stagnancy",
     set = "Cataclysm",
     pos = { x = 7, y = 1 },
+    indicator = { 
+        atlas_key = "clyt_CataclysmIndicators", 
+        pos = { x = 7, y = 1 },
+        display_size = { w = 23, h = 23 },
+        scale_mod = 0.25
+    },
+    config = { rounds = 3, blindsize = 2, },
+    can_use_inactive = function(self, card)
+        return true
+    end,
+    can_use_active = function(self, card)
+        return true
+    end,
+    use_inactive = function(self, card)
+        G.E_MANAGER:add_event(Event({
+            delay = 0.4,
+            func = function()
+                for _, joker in pairs(G.jokers.cards) do
+                    joker:add_sticker("eternal",true)
+                    joker:juice_up(0.3, 0.5)
+                    play_sound('tarot1')
+                end
+            return true
+        end
+        }))
+    end,
+    use_active = function(self, card)
+        G.E_MANAGER:add_event(Event({
+            delay = 0.4,
+            func = function()
+                for _, joker in pairs(G.jokers.cards) do
+                    joker:remove_sticker("eternal",true)
+                    joker:juice_up(0.3, 0.5)
+                    play_sound('tarot1')
+                end
+            return true
+        end
+        }))
+		SMODS.change_booster_limit(1)
+    end,
 }
 
 -- Tempest
